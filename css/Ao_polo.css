@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 50px ;
+    height: 70px;
+    align-items: center;
+    background-image: url("back_1.jpg");
+    list-style: none;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 9999;
+}
+.logo {
+    flex: 2;
+    margin-top: 10px;
+}
+.logo>span {
+    font-size: smaller;
+    font-style: italic;
+    margin-left:  20px;
+}
+.menu {
+    flex: 3;
+    display: flex;
+    padding:20px 70px 0 0;
+}
+.menu > li {
+    padding: 20px 12px;
+    position: relative;
+    flex: content;
+}
+.menu > li:hover .sub-menu {
+    visibility: visible;
+    top: 50px;
+}
+.sub-menu {
+    position: absolute;
+    width: 120px;
+    border: 1px solid #ccc;
+    padding: 10px 0 5px 10px;
+    visibility: hidden;
+    top: 50px;
+    transition:  0.2s;
+    background-color: #fff;
+    list-style: none;
+}
+.sub-menu li a {
+    font-weight: normal;
+    font-size: 12px;
+}
+.menu  li a {
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+}
+.others {
+    flex: 1;
+    display: flex;
+}
+.others > li {
+    padding-left: 0 12px;
+    align-items: center;
+    padding-top: 10px;
+    
+} 
+.others > li:first-child {
+    position: relative;
+}
+.others > li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0px;
+}
+.others > li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+#headline {
+    text-align: center;
+    margin: 90px 0px;
+}
+.mapping {
+    display: flex; 
+    justify-content: center;
+    font-size: small;
+    font-style: italic;
+    list-style: none;
+}
+h2 {
+    padding: 10px 20px;
+    font-size: 35px;
+    font-weight: 600px;
+    text-transform: uppercase; 
+}
+#Items {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+ul.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+ul.products li {
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+ul.products li img {
+    max-width: 100%;
+    height: auto;
+}
+ul.products li .product-top {
+    position: relative;
+    overflow: hidden;
+}
+ul.products li .product-top .product-thumb {
+    display: block;
+}
+ul.products li:hover .product-top .product-thumb img {
+    filter: opacity(80%);
+}
+ul.products li .product-top .product-thumb img {
+    display: block;
+}
+ul.products li .product-top a.buy-now {
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    background-color: #446084;
+    color: #fff;
+    padding: 10px 0px;
+    position: absolute;
+    bottom: -36px;
+    width: 100%;
+    transition: 0.25s ease-in-out;
+    opacity: 0.85;
+}
+ul.products li:hover a.buy-now {
+    bottom: 0px;
+}
+ul.products li .product-infor {
+    padding: 5px 0px;
+}
+ul.products li .product-infor a {
+    display: block;
+    text-decoration: none;
+}
+ul.products li .product-infor a.product-cat {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #9e9e9e;
+    padding: 3px 0px;
+
+}
+ul.products li .product-infor a.product-name {
+    color: #334862;
+    padding: 3px 0px;
+    font-weight: 550;
+}
+ul.products li .product-infor product-price {
+    color: #111;
+    padding: 2px 0px;
+    font-weight: 600;
+}
+footer {
+    background-color: #f4f4f4;
+    display: flex;
+    padding: 60px 0px 60px 30px;
+    margin-top: 150px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+footer .information {
+    width: 30%;
+    margin-right: 0px;
+    padding: 0 0px 0 15px;
+}
+footer .information img {
+    max-height: 44px;
+    margin-bottom: 24px;
+}
+footer .information .logo h3 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+footer .information .logo h3~h3 {
+    margin-top: 30px;
+}
+footer .information .logo .newsletter {
+    position: relative;
+    display: block;
+}
+footer .information .logo .newsletter .input_email input {
+    padding: 8px 86px 6px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    border: none;
+    display: inline-block;
+    box-shadow: none;
+    background: none;
+    border-bottom: 1px solid #cecece;
+    height: 31px
+}
+footer .information .logo .newsletter .actions  button{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    font-weight: 600;
+    padding: 0.5px 2px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+footer .information .logo .newsletter .actions:hover button {
+    background-color: #000;
+    color: #fff;
+    transition-delay: 0.2ms;
+}
+footer .information .logo #Da_Tbao {
+    margin: 20px 8px 0 0px;
+    
+}
+footer .about {
+    width: 20%;
+    list-style: initial;
+    padding: 0 15px 0 15px;
+}
+footer .about #title_about h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+footer .about #content_about li {
+    display: list-item;
+    line-height: 40px;
+    font: size 20px;
+}
+footer .about #content_about li:hover {
+    text-decoration: underline;
+    transition: 0.2s;
+}
+footer .policy {
+    width: 20%;
+}
+footer .policy #title_policy h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+footer .policy #content_policy li {
+    display: list-item;
+    line-height: 40px;
+    font: size 20px;
+}
+footer .policy #content_policy li:hover {
+    text-decoration: underline;
+    transition: 0.2s;
+}
+footer .store_infor {
+    width: 30%;
+    padding: 0 15px 0 15px;
+}
+footer .store_infor #title_store h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+footer .store_infor #content_store li {
+    display: list-item;
+    line-height: 40px;
+    font: size 20px;
+}
+footer .store_infor #content_store a {
+    font-weight: bold;
+    font-style: italic;
+}
+footer .store_infor #content_store:hover a {
+    text-decoration: underline;
+}
